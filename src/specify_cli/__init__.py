@@ -272,6 +272,13 @@ AGENT_CONFIG = {
         "install_url": "https://code.kimi.com/",
         "requires_cli": True,
     },
+    "jules": {
+        "name": "Jules",
+        "folder": ".jules/",
+        "commands_subdir": "prompts",
+        "install_url": None,  # Web-based, no CLI check needed
+        "requires_cli": False,
+    },
     "generic": {
         "name": "Generic (bring your own agent)",
         "folder": None,  # Set dynamically via --ai-commands-dir

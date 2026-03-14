@@ -291,6 +291,9 @@ build_variant() {
     kimi)
       mkdir -p "$base_dir/.kimi/skills"
       create_kimi_skills "$base_dir/.kimi/skills" "$script" ;;
+    jules)
+      mkdir -p "$base_dir/.jules/prompts"
+      generate_commands jules md "\$ARGUMENTS" "$base_dir/.jules/prompts" "$script" ;;
     generic)
       mkdir -p "$base_dir/.speckit/commands"
       generate_commands generic md "\$ARGUMENTS" "$base_dir/.speckit/commands" "$script" ;;
@@ -300,7 +303,7 @@ build_variant() {
 }
 
 # Determine agent list
-ALL_AGENTS=(claude gemini copilot cursor-agent qwen opencode windsurf codex kilocode auggie roo codebuddy amp shai tabnine kiro-cli agy bob vibe qodercli kimi generic)
+ALL_AGENTS=(claude gemini copilot cursor-agent qwen opencode windsurf codex kilocode auggie roo codebuddy amp shai tabnine kiro-cli agy bob vibe qodercli kimi jules generic)
 ALL_SCRIPTS=(sh ps)
 
 norm_list() {

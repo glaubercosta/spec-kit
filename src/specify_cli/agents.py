@@ -135,6 +135,12 @@ class CommandRegistrar:
             "format": "markdown",
             "args": "$ARGUMENTS",
             "extension": "/SKILL.md"
+        },
+        "jules": {
+            "dir": ".jules/prompts",
+            "format": "markdown",
+            "args": "$ARGUMENTS",
+            "extension": ".md"
         }
     }
 
